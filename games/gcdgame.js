@@ -12,7 +12,7 @@ const brainGcd = () => {
 
     const result = gcdFind(num1, num2);
 
-    return [question, result];
+    return [question, String(result)];
   };
   basisOfGames(desc, gcd);
 };

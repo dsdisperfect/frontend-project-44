@@ -15,7 +15,7 @@ const brainProgression = () => {
 
     const question = `${col.join(' ')}`;
 
-    return [question, result];
+    return [question, String(result)];
   };
   basisOfGames(desc, progression);
 };
