@@ -7,17 +7,17 @@ export const brainProgression = () => {
 
     const progression = () => {
 
-        let col = progrGenerate()
+        let col = progrGenerate();
 
-        let indexHiddenNum = randomIntenger(0, col.length - 1)
+        let indexHiddenNum = randomIntenger(0, col.length - 1);
         let result = col[indexHiddenNum];
 
-        col[indexHiddenNum] = '..'
+        col[indexHiddenNum] = '..';
 
-        let question = `${col}`
+        let question = `${col.join(' ')}`;
 
         return [question, result];
     }
-    basisOfGames(desc, progression)
+    basisOfGames(desc, progression);
 
 }
