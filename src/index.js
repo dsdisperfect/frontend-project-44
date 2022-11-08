@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
+import { hello } from './cli.js';
 
 export const basisOfGames = (desc, task) => {
-
+    
     let answer, correctAnswer, answerAndQuestion;
-    const name = readlineSync.question('May I have your name?');
-    console.log(`Hello, ${name}!`);
+    const name = hello()
     
     console.log(desc);
 
