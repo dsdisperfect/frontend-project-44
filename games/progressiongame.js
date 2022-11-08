@@ -1,23 +1,23 @@
-import { randomIntenger } from "../src/randomIntenger.js";
-import { basisOfGames } from "../src/index.js";
-import { progrGenerate } from "../src/progrGenerate.js";
+import randomIntenger from '../src/randomIntenger.js';
+import basisOfGames from '../src/index.js';
+import progrGenerate from '../src/progrGenerate.js';
 
-export const brainProgression = () => {
-    const desc = 'What number is missing in the progression?';
+const brainProgression = () => {
+  const desc = 'What number is missing in the progression?';
 
-    const progression = () => {
+  const progression = () => {
+    const col = progrGenerate();
 
-        let col = progrGenerate();
+    const indexHiddenNum = randomIntenger(0, col.length - 1);
+    const result = col[indexHiddenNum];
 
-        let indexHiddenNum = randomIntenger(0, col.length - 1);
-        let result = col[indexHiddenNum];
+    col[indexHiddenNum] = '..';
 
-        col[indexHiddenNum] = '..';
+    const question = `${col.join(' ')}`;
 
-        let question = `${col.join(' ')}`;
+    return [question, result];
+  };
+  basisOfGames(desc, progression);
+};
 
-        return [question, result];
-    }
-    basisOfGames(desc, progression);
-
-}
+export default brainProgression;

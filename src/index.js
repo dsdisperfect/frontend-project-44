@@ -1,30 +1,26 @@
 import readlineSync from 'readline-sync';
-import { hello } from './cli.js';
+import hello from './cli.js';
 
-export const basisOfGames = (desc, task) => {
-    
-    let answer, correctAnswer, answerAndQuestion;
-    const name = hello();
-    
-    console.log(desc);
+const basisOfGames = (desc, task) => {
+  let answer; let correctAnswer; let
+    question;
+  const name = hello();
 
+  console.log(desc);
 
-    for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
+    [question, correctAnswer] = task();
 
-        answerAndQuestion = task();
-
-        console.log(`Question: ${answerAndQuestion[0]}`);
-        answer = readlineSync.question("Your answer: ");
-        correctAnswer = answerAndQuestion[1];
-        if (answer == correctAnswer) {
-            console.log('Correct!');
-        }
-        else {
-            return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.;
+    console.log(`Question: ${question}`);
+    answer = readlineSync.question('Your answer: ');
+    if (answer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.;
             Let's try again, ${name}!`);
-        }
     }
+  }
 
-    return console.log(`Congratulations, ${name}!`);
-
-}
+  return console.log(`Congratulations, ${name}!`);
+};
+export default basisOfGames;

@@ -1,18 +1,20 @@
-import { basisOfGames } from "../src/index.js";
-import { randomIntenger } from "../src/randomIntenger.js";
-import { gcdFind } from "../src/gcdFind.js";
+import basisOfGames from '../src/index.js';
+import randomIntenger from '../src/randomIntenger.js';
+import gcdFind from '../src/gcdFind.js';
 
-export const brainGcd = () => {
-    const desc = 'Find the greatest common divisor of given numbers.';
+const brainGcd = () => {
+  const desc = 'Find the greatest common divisor of given numbers.';
 
-    const gcd = () => {
-        let num1 = randomIntenger(1, 100);
-        let num2 = randomIntenger(1, 100);
-        let question = `${num1} ${num2}`;
+  const gcd = () => {
+    const num1 = randomIntenger(1, 100);
+    const num2 = randomIntenger(1, 100);
+    const question = `${num1} ${num2}`;
 
-        let result = gcdFind(num1, num2);
+    const result = gcdFind(num1, num2);
 
-        return [question, result]
-    }
-    basisOfGames(desc, gcd)
-}
+    return [question, result];
+  };
+  basisOfGames(desc, gcd);
+};
+
+export default brainGcd;
