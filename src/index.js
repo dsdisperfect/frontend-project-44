@@ -13,7 +13,7 @@ export const basisOfGames = (desc, task) => {
 
         answerAndQuestion = task();
 
-        console.log(answerAndQuestion[0]);
+        console.log(`Question: ${answerAndQuestion[0]}`);
         answer = readlineSync.question("Your answer:");
         correctAnswer = answerAndQuestion[1];
         if (answer == correctAnswer) {
