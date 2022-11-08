@@ -24,7 +24,7 @@ const brainCalc = () => {
       default:
         result = 1;
     }
-    return [question, result];
+    return [question, String(result)];
   };
   basisOfGames(desc, calc);
 };
