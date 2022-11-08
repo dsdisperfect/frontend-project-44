@@ -4,7 +4,7 @@ import { hello } from './cli.js';
 export const basisOfGames = (desc, task) => {
     
     let answer, correctAnswer, answerAndQuestion;
-    const name = hello()
+    const name = hello();
     
     console.log(desc);
 
@@ -14,7 +14,7 @@ export const basisOfGames = (desc, task) => {
         answerAndQuestion = task();
 
         console.log(`Question: ${answerAndQuestion[0]}`);
-        answer = readlineSync.question("Your answer:");
+        answer = readlineSync.question("Your answer: ");
         correctAnswer = answerAndQuestion[1];
         if (answer == correctAnswer) {
             console.log('Correct!');
@@ -25,6 +25,6 @@ export const basisOfGames = (desc, task) => {
         }
     }
 
-    return console.log(`Congratulations, ${name}`);
+    return console.log(`Congratulations, ${name}!`);
 
 }
