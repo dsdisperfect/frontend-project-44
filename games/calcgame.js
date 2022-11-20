@@ -1,14 +1,14 @@
 import basisOfGames from '../src/index.js';
-import randomIntenger from '../src/randomIntenger.js';
+import { getRandomIntenger } from '../src/utils.js';
 
 const brainCalc = () => {
   const desc = 'What is the result of the expression?';
 
   const calc = () => {
-    const number1 = randomIntenger(1, 100);
-    const number2 = randomIntenger(1, 100);
+    const number1 = getRandomIntenger(1, 100);
+    const number2 = getRandomIntenger(1, 100);
     const operands = ['+', '-', '*'];
-    const operand = operands[randomIntenger(0, 2)];
+    const operand = operands[getRandomIntenger(0, 2)];
     let result;
     const question = `${number1} ${operand} ${number2}`;
     switch (operand) {

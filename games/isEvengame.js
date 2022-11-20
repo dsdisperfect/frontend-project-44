@@ -1,11 +1,11 @@
 import basisOfGames from '../src/index.js';
-import randomIntenger from '../src/randomIntenger.js';
+import { getRandomIntenger } from '../src/utils.js';
 
 const brainEven = () => {
   const desc = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const isEven = () => {
-    const num = randomIntenger(1, 100);
+    const num = getRandomIntenger(1, 100);
     const question = `${num}`;
     let result;
 

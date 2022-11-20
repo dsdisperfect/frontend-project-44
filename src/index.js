@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import hello from './cli.js';
+import { hello } from './utils.js';
 
 const basisOfGames = (desc, task) => {
   let answer; let correctAnswer; let

@@ -1,14 +1,13 @@
-import randomIntenger from '../src/randomIntenger.js';
 import basisOfGames from '../src/index.js';
-import progrGenerate from '../src/progrGenerate.js';
+import { getRandomIntenger, generateProgression } from '../src/utils.js';
 
 const brainProgression = () => {
   const desc = 'What number is missing in the progression?';
 
   const progression = () => {
-    const col = progrGenerate();
+    const col = generateProgression();
 
-    const indexHiddenNum = randomIntenger(0, col.length - 1);
+    const indexHiddenNum = getRandomIntenger(0, col.length - 1);
     const result = col[indexHiddenNum];
 
     col[indexHiddenNum] = '..';
