@@ -1,17 +1,16 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/dsdisperfect/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/dsdisperfect/frontend-project-44/actions)",
+  "description": "Console games on JS",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "code": "bin/brain-games.js",
-    "brain-games": "bin/brain-games.js",
-    "brain-calc": "bin/brain-calc.js",
-    "brain-even": "bin/brain-even.js",
-    "brain-gcd": "bin/brain-gcd.js",
-    "brain-prime": "bin/brain-prime.js",
-    "brain-progression": "bin/brain-progression.js"
+    "brain-games": "bin/runBrainGames.js",
+    "brain-calc": "bin/runBrainCalc.js",
+    "brain-even": "bin/runBrainEven.js",
+    "brain-gcd": "bin/runBrainGcd.js",
+    "brain-prime": "bin/runBrainPrime.js",
+    "brain-progression": "bin/runBrainProgression.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,7 +32,6 @@
     "eslint": "^8.27.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^27.1.4",
-    "eslint-plugin-react": "^7.31.10"
+    "eslint-plugin-jest": "^27.1.4"
   }
 }

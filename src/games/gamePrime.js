@@ -1,8 +1,8 @@
-import basisOfGames from '../src/index.js';
-import { getRandomIntenger } from '../src/utils.js';
+import basisOfGames from '../index.js';
+import getRandomIntenger from '../utils.js';
 
-const brainPrime = () => {
-  const desc = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const playBrainPrime = () => {
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const isPrime = () => {
     const number = getRandomIntenger(1, 100);
@@ -16,7 +16,7 @@ const brainPrime = () => {
     }
     return [question, result];
   };
-  basisOfGames(desc, isPrime);
+  basisOfGames(description, isPrime);
 };
 
-export default brainPrime;
+export default playBrainPrime;
