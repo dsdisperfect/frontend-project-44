@@ -1,23 +1,17 @@
-import basisOfGames from '../index.js';
+import runEngine from '../index.js';
 import getRandomIntenger from '../utils.js';
 
-const playBrainEven = () => {
-  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const isEven = (num) => num % 2 === 0;
 
-  const isEven = () => {
-    const num = getRandomIntenger(1, 100);
-    const question = `${num}`;
-    let result;
+const getBrainIsEven = () => {
+  const num = getRandomIntenger(1, 100);
+  const question = `${num}`;
+  const answer = isEven(num) ? 'yes' : 'no';
 
-    if (num % 2 === 0) {
-      result = 'yes';
-    } else {
-      result = 'no';
-    }
-
-    return [question, result];
-  };
-  basisOfGames(description, isEven);
+  return [question, answer];
 };
 
-export default playBrainEven;
+export default () => {
+  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+  runEngine(description, getBrainIsEven);
+};

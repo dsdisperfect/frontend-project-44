@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
 import hello from './cli.js';
 
-const basisOfGames = (task, generateRound) => {
+const roundsCount = 3;
+
+const runEngine = (task, generateRound) => {
   const name = hello();
-  const roundsCount = 3;
   console.log(task);
 
   for (let i = 0; i < roundsCount; i += 1) {
@@ -22,4 +23,5 @@ const basisOfGames = (task, generateRound) => {
 
   console.log(`Congratulations, ${name}!`);
 };
-export default basisOfGames;
+
+export default runEngine;
