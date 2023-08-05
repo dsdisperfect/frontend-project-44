@@ -26,5 +26,5 @@ const getBrainCalc = () => {
 
 export default () => {
   const description = 'What is the result of the expression?';
-  runEngine(description, getBrainCalc);
+  runEngine(description, getBrainCalc());
 };

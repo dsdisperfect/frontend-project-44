@@ -19,5 +19,5 @@ const getBrainGcd = () => {
 
 export default () => {
   const description = 'Find the greatest common divisor of given numbers.';
-  runEngine(description, getBrainGcd);
+  runEngine(description, getBrainGcd());
 };

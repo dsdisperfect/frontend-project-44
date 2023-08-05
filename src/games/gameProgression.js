@@ -29,5 +29,5 @@ const getBrainProgression = () => {
 
 export default () => {
   const description = 'What number is missing in the progression?';
-  runEngine(description, getBrainProgression);
+  runEngine(description, getBrainProgression());
 };
