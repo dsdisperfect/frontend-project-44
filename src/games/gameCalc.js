@@ -1,8 +1,8 @@
 import runEngine from '../index.js';
 import getRandomIntenger from '../utils.js';
 
-const calculate = (number1, operand, number2) => {
-  switch (operand) {
+const calculate = (number1, operator, number2) => {
+  switch (operator) {
     case '+':
       return number1 + number2;
     case '-':
@@ -10,7 +10,7 @@ const calculate = (number1, operand, number2) => {
     case '*':
       return number1 * number2;
     default:
-      return 1;
+      throw new Error(`Invalid operand - ${operator}`);
   }
 };
 
