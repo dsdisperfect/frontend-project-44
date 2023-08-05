@@ -10,7 +10,7 @@ const runEngine = (task, generateRound) => {
   console.log(task);
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const [question, correctAnswer] = generateRound;
+    const [question, correctAnswer] = generateRound();
 
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');

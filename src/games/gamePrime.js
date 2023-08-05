@@ -1,5 +1,5 @@
 import runEngine from '../index.js';
-import { getBrainResponse } from '../utils.js';
+import getRandomIntenger from '../utils.js';
 
 const isPrime = (num) => {
   for (let i = 2; i < num; i += 1) {
@@ -7,10 +7,15 @@ const isPrime = (num) => {
   }
   return num > 1;
 };
+const getBrainIsPrime = () => {
+  const number = getRandomIntenger(1, 100);
+  const question = `${number}`;
+  const answer = isPrime(number) ? 'yes' : 'no';
 
-const getBrainPrime = getBrainResponse(isPrime);
+  return [question, answer];
+};
 
 export default () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  runEngine(description, getBrainPrime);
+  runEngine(description, getBrainIsPrime);
 };
