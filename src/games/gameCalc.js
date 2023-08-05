@@ -1,5 +1,5 @@
 import runEngine from '../index.js';
-import { getRandomIntenger } from '../utils.js';
+import getRandomIntenger from '../utils.js';
 
 const calculate = (number1, operator, number2) => {
   switch (operator) {
