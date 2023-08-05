@@ -22,7 +22,7 @@ const getBrainProgression = () => {
 
   col[indexHiddenNum] = '..';
 
-  const question = `${col}`;
+  const question = col.join(' ');
 
   return [question, answer];
 };
