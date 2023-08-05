@@ -1,5 +1,5 @@
 import runEngine from '../index.js';
-import { getRandomIntenger } from '../utils.js';
+import getRandomIntenger from '../utils.js';
 
 const findGcd = (x, y) => {
   if (y > x) return findGcd(y, x);

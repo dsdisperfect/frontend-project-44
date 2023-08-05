@@ -1,5 +1,5 @@
 import runEngine from '../index.js';
-import { getRandomIntenger } from '../utils.js';
+import getRandomIntenger from '../utils.js';
 
 const generateProgression = (start, step, length) => {
   const col = [start];
